@@ -3,9 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi persona</title>
+
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            color: gray;
+
+        }
+        a{
+            color: cadetblue;
+            padding: 10px;
+            border-top: 2px solid rgb(9, 221, 80);
+            border-bottom: 3px solid rgb(9, 221, 80);
+            margin-left: 10px;
+        }
+
+        h2{
+            color: black;
+        }
+        nav{
+            padding: 50px;
+        }
+
+        .Titulos{
+            font-style: italic;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        #cont_principal, aside{
+            max-width: 90%;
+            margin: 0 auto;/*centrar*/
+            border: 2px double blue;
+        }
+        p, div{
+            background-color: ghostwhite;
+
+        }
+        .imag_web{
+            width: 150px;
+            height: 150px;
+        }
+
+        .imag_mias{
+            border-radius: 50px;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        form input, form textarea {
+            margin-bottom: 15px;
+            padding: 25px;
+            width: 25%;
+        }
+
+        table, th, td {
+            border: 1px solid rgb(23, 155, 148);
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
-    <label for="">Hola mundo</label>
+    <header>
+        <!----Hoja de esilo de linea, se aplica a un solo elemento de este documento-->
+        <h1 style="background-color: cornflowerblue; font-size: 24pt">Pagina wed personal</h1>
+
+        <nav>
+            <a  href="#Inicio"> Inicio</a>
+            <a  href="#Familia"> Familia </a>
+            <a  href="#Educacion"> Educación</a>
+            <a  href="#Deporte"> Deportes </a>
+            <a  href="#Contacto"> Contacto </a>
+
+        </nav>
+
+
+        <div id="Inicio"> 
+            <h2>Sobre mi</h2>
+            <p>Me presento mi nombre es Chávez Eduardo tengo 22 años </p>
+ 
+            <blockquote cite="https://www.frases.com">
+                "El éxito no se logra sólo con cualidades especiales. Es sobre todo un trabajo de constancia, de método y de organización."
+            </blockquote>
+        </div>
+
+        <div id="Familia"> 
+            <h2>Mi familia</h2>
+            <p>Esta es mi familia conformada por 5 miembros, esta foto fue el dia de mi cumpleaños </p>
+            <img class="imag_mias" src="/TallerHTML_CMEE/Tarea_html/familia.jpeg" alt="Familia">
+
+        </div>
+
+        <main id="cont_principal">
+            <section>
+                <article>
+                    <h3 class="Titulos">Musica</h3>
+                    <ul>
+                        <li>Vallenato</li>
+                        <li>Regueeton antiguo</li>
+                        <li>Salsa romantica</li>
+                        <li>Cumbia</li>
+                        <li>Merengue</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h3 class="Titulos">Pasa tiempos</h3>
+                    <ul>
+                        <li>Videos sobre hmtl</li>
+                        <li>Videos sobre UI</li>
+                        <iframe width="400" height="315"
+                        src="https://www.youtube.com/embed/UDdPJ2c_XQI">
+                        </iframe>
+
+                        <li>Jugar videojuegos mobile</li>
+                        <li>Ver partidos de ecuavoli</li>
+                        
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <div id="Educacion"> 
+            <h2>Educación</h2>
+            <ul>
+                <li>Me gradue en el colegio fiscal Provincia de Tungurahua</li>
+                <li>Tengo mi titulo de bachiller contabilidad</li>
+                <li>Estoy cursando la carrea de software en la UG</li>
+            </ul>
+        </div>
+
+        <div id="Deporte"> 
+            <h2>Deporte</h2>
+            <p>Los deportes que juego actualmente es el ecuavoli y el futbol, los 
+                practico en la universidad y en mi cada con mis amigos</p>
+            <img class="imag_mias" src="/TallerHTML_CMEE/Tarea_html/ecua.jpeg" alt="Deporte"> 
+        </div>
+
+          
+        <aside>
+            <section>
+                <article>
+                    <h4 class="Titulos" >Mis hobbis</h4>
+                    <p>Jugar billar con mis amigos y jugar bolos</p>
+                    <img class="imag_web" src="/TallerHTML_CMEE/Tarea_html/juegos2.jpeg" alt="Bolos"> 
+                </article>
+
+                <h4 class="Titulos"> Estadísticas</h4>
+                <table>
+                    <tr>
+                      <th>Edad</th>
+                      <th>Tamaño</th>
+                      <th>Peso</th>
+                    </tr>
+                    <tr>
+                      <td>22</td>
+                      <td>1.74 </td>
+                      <td>76 Kl</td>
+                    </tr>
+                    
+                  </table>
+            </section>
+        </aside>
+
+        <div id="Contacto">
+            <h2>Contáctame</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required> <br><br>
+        
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="asunto">Asunto:</label><br>
+                <input type="text" id="asunto" name="asunto"><br><br>
+        
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="40" required></textarea><br><br>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <footer>
+            <div>
+                <div>
+                    <em class="Titulos">Redes socciales:</em>
+
+                    <a href="https://www.instagram.com/edu_12003/" target="_blank"><img class="imag_web" src="/TallerHTML_CMEE/Tarea_html/Instag.jpeg" alt="mi red social">Instagram </a>
+                    <a href="https://www.facebook.com/profile.php?id=100040625383717 " target="_blank"><img class="imag_web" src="/TallerHTML_CMEE/Tarea_html/faceb.jpeg" alt="mi red social">Facebook </a>
+
+                </div>
+            </div>
+        </footer>
+    </header>
 </body>
 </html>
